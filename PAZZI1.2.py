@@ -1,0 +1,430 @@
+# Bilbiotecas para obter a opção de limpar tela:
+import os
+import platform
+
+# Função de limpar tela:
+def limpar_tela():
+  if platform.system() == 'Windows':
+    os.system('cls')
+  else:
+    os.system('clear')
+
+#Bilbioteca para obter a opção de timer:
+import time
+
+#Biblioteca para abrir links externos:
+import webbrowser
+
+#----------------------------------MATRIZ----------------------------------#
+
+#Soma:
+def soma():
+   limpar_tela()
+   print("PAZZI, La Calculadora Magica")
+   print("")
+   print("MATRIZ - SOMA")
+   print("")
+   print("Matriz A:")
+   print("")
+
+   A = []
+   linhaA = int(input("Insira o número de linhas: "))
+   colunaA = int(input("Insira o número de colunas: "))
+   print("")
+
+   for x in range(linhaA):
+      A_linha = []
+      for y in range(colunaA):
+         valorA = float(input(f"Digite o valor da posição A({x},{y}): "))
+         A_linha.append(valorA)
+      A.append(A_linha)
+
+   print("")
+   print("Matriz B:")
+   print("")
+
+   B = []
+   linhaB = int(input("Insira o número de linhas: "))
+   colunaB = int(input("Insira o número de colunas: "))
+   print("")
+
+   for z in range(linhaB):
+      B_linha = []
+      for w in range(colunaB):
+         valorB = float(input(f"Digite o valor da posição B({z},{w}): "))
+         B_linha.append(valorB)
+      B.append(B_linha)
+
+   if x == z and y == w:
+      C = []
+      for i in range(linhaA):
+         C_linha = []
+         for j in range(colunaA):
+            C_linha.append(A[i][j] + B[i][j])
+         C.append(C_linha)
+
+      limpar_tela()
+      print("PAZZI, La Calculadora Magica")
+      print("")
+      print("MATRIZ - SOMA")
+      print("")
+      print("Resultado:")
+      print("")
+      print("A =")
+      print(A)
+      print("")
+      print("+")
+      print("")
+      print("B =")
+      print(B)
+      print("")
+      print("=")
+      print("")
+      print("C =")
+      print(C)
+      time.sleep(5)
+      print("")
+      selecao = input("Deseja fazer outro cálculo?: S - Sim | N - Não: ")
+      if selecao == "S":
+         soma()
+      if selecao == "N":
+        menu()
+
+   else:
+      limpar_tela()
+      print("PAZZI, La Calculadora Magica")
+      print("")
+      print("MATRIZ - SOMA")
+      print("")
+      print("Resultado:")
+      print("")
+      print("A =")
+      print(A)
+      print("")
+      print("+")
+      print("")
+      print("B =")
+      print(B)
+      print("")
+      print("=")
+      print("")
+      print("NÃO É POSSÍVEL REALIZAR ESTE CÁLCULO")
+      time.sleep(5)
+      print("")
+      selecao = input("Deseja realizar outro cálculo?: S - Sim | N - Não: ")
+      if selecao == "S":
+        soma()
+      if selecao == "N":
+        menu()
+
+#Subtração:       
+def subtracao():
+   limpar_tela()
+   print("PAZZI, La Calculadora Magica")
+   print("")
+   print("MATRIZ - SUBTRAÇÃO")
+   print("")
+   print("Matriz A:")
+   print("")
+
+   A = []
+   linhaA = int(input("Insira o número de linhas: "))
+   colunaA = int(input("Insira o número de colunas: "))
+   print("")
+
+   for x in range(linhaA):
+      A_linha = []
+      for y in range(colunaA):
+         valorA = float(input(f"Digite o valor da posição A({x},{y}): "))
+         A_linha.append(valorA)
+      A.append(A_linha)
+
+   print("")
+   print("Matriz B:")
+   print("")
+
+   B = []
+   linhaB = int(input("Insira o número de linhas: "))
+   colunaB = int(input("Insira o número de colunas: "))
+   print("")
+
+   for z in range(linhaB):
+      B_linha = []
+      for w in range(colunaB):
+         valorB = float(input(f"Digite o valor da posição B({z},{w}): "))
+         B_linha.append(valorB)
+      B.append(B_linha)
+
+   if x == z and y == w:
+      C = []
+      for i in range(linhaA):
+         C_linha = []
+         for j in range(colunaA):
+            C_linha.append(A[i][j] - B[i][j])
+         C.append(C_linha)
+
+      limpar_tela()
+      print("PAZZI, La Calculadora Magica")
+      print("")
+      print("MATRIZ - SUBTRAÇÃO")
+      print("")
+      print("Resultado:")
+      print("")
+      print("A =")
+      print(A)
+      print("")
+      print("-")
+      print("")
+      print("B =")
+      print(B)
+      print("")
+      print("=")
+      print("")
+      print("C =")
+      print(C)
+      time.sleep(5)
+      print("")
+      selecao = input("Deseja fazer outro cálculo?: S - Sim | N - Não: ")
+      if selecao == "S":
+        subtracao()
+      if selecao == "N":
+        menu()
+
+   else:
+      limpar_tela()
+      print("PAZZI, La Calculadora Magica")
+      print("")
+      print("MATRIZ - SUBTRAÇÃO")
+      print("")
+      print("Resultado:")
+      print("")
+      print("A =")
+      print(A)
+      print("")
+      print("+")
+      print("")
+      print("B =")
+      print(B)
+      print("")
+      print("=")
+      print("")
+      print("NÃO É POSSÍVEL REALIZAR ESTE CÁLCULO")
+      time.sleep(5)
+      print("")
+      selecao = input("Deseja realizar outro cálculo?: S - Sim | N - Não: ")
+      if selecao == "S":
+        subtracao()
+      if selecao == "N":
+        menu()
+
+#Multiplicação:
+def multiplicacao():
+   limpar_tela()
+   print("PAZZI, La Calculadora Magica")
+   print("")
+   print("MATRIZ - MULTIPLICAÇÃO")
+   print("")
+   print("Matriz A:")
+   print("")
+
+   A = []
+   linhaA = int(input("Insira o número de linhas: "))
+   colunaA = int(input("Insira o número de colunas: "))
+   print("")
+
+   for x in range(linhaA):
+      A_linha = []
+      for y in range(colunaA):
+         valorA = float(input(f"Digite o valor da posição A({x},{y}): "))
+         A_linha.append(valorA)
+      A.append(A_linha)
+
+   print("")
+   print("Matriz B:")
+   print("")
+
+   B = []
+   linhaB = int(input("Insira o número de linhas: "))
+   colunaB = int(input("Insira o número de colunas: "))
+   print("")
+
+   for z in range(linhaB):
+      B_linha = []
+      for w in range(colunaB):
+         valorB = float(input(f"Digite o valor da posição B({z},{w}): "))
+         B_linha.append(valorB)
+      B.append(B_linha)
+
+   if y == z:
+      C = []
+      for i in range(linhaA):
+         C_linha = []
+         for j in range(colunaB):
+            soma = 0
+            for k in range(colunaA):
+               soma += (A[i][k] * B[k][j])
+            C_linha.append(soma)
+         C.append(C_linha)
+
+      limpar_tela()
+      print("PAZZI, La Calculadora Magica")
+      print("")
+      print("MATRIZ - MULTIPLICAÇÃO")
+      print("")
+      print("Resultado:")
+      print("")
+      print("A =")
+      print(A)
+      print("")
+      print("-")
+      print("")
+      print("B =")
+      print(B)
+      print("")
+      print("=")
+      print("")
+      print("C =")
+      print(C)
+      time.sleep(5)
+      print("")
+      selecao = input("Deseja fazer outro cálculo?: S - Sim | N - Não: ")
+      if selecao == "S":
+        multiplicacao()
+      if selecao == "N":
+        menu()
+
+   else:
+      limpar_tela()
+      print("PAZZI, La Calculadora Magica")
+      print("")
+      print("MATRIZ - MULTIPLICAÇÃO")
+      print("")
+      print("Resultado:")
+      print("")
+      print("A =")
+      print(A)
+      print("")
+      print("+")
+      print("")
+      print("B =")
+      print(B)
+      print("")
+      print("=")
+      print("")
+      print("NÃO É POSSÍVEL REALIZAR ESTE CÁLCULO")
+      time.sleep(5)
+      print("")
+      selecao = input("Deseja realizar outro cálculo?: S - Sim | N - Não: ")
+      if selecao == "S":
+        subtracao()
+      if selecao == "N":
+        menu()
+
+
+def inversa():
+   limpar_tela()
+   print("PAZZI, La Calculadora Magica")
+   print("")
+   print("MATRIZ - INVERSA")
+   print("")
+   print("Matriz A:")
+   print("")
+
+   A = []
+   linhaA = int(input("Insira o número de linhas: "))
+   colunaA = int(input("Insira o número de colunas: "))
+   print("")
+
+   for x in range(linhaA):
+      A_linha = []
+      for y in range(colunaA):
+         valorA = float(input(f"Digite o valor da posição A({x},{y}): "))
+         A_linha.append(valorA)
+      A.append(A_linha)
+
+   if x == y:
+      pass
+    
+#----------------------------------MENUS----------------------------------#
+
+#Seleção de Matriz:
+def MATRIZ():
+   limpar_tela()
+   print("PAZZI, La Calculadora Magica")
+   print("")
+   print("Carregando...")
+   time.sleep(0)
+   limpar_tela()
+   print("PAZZI, La Calculadora Magica")
+   print("")
+   print("Selecione tipo de calculo entre matrizes a ser feito:\n1 - Soma \n2 - Subtração\n3 - Multiplicação\n4 - Inversa")
+   print("")
+   selecaoMATRIZ = input("Seleção: ")
+
+   if selecaoMATRIZ == "1":
+      soma()
+
+   if selecaoMATRIZ == "2":
+      subtracao()
+
+   if selecaoMATRIZ == "3":
+         multiplicacao()
+
+   else:
+      print("OPÇÃO INCORRETA")
+      print("")
+      time.sleep(2)
+      MATRIZ()
+
+#Seleção de Sistema Linear:
+def LINEAR():
+   limpar_tela()
+   print("PAZZI, La Calculadora Magica")
+   print("")
+   print("Carregando...")
+   time.sleep(0)
+   limpar_tela()
+   print("PAZZI, La Calculadora Magica")
+   print("")
+   selecaoLINEAR = input("Digite a quantidade de incognitas a serem calculados:")
+
+def OUTROS():
+   while(True):
+      limpar_tela()
+      print("PAZZI, La Calculadora Magica")
+      print("")
+      print("Criado por:\nFelipe Gabriel Macedo\nArthur Américo\n\nENGENHARIA DE CONTROLE AUTOMAÇÃO 2º Semestre 2026\n\nFaculdade Engenheiro Salvador Arena\n")
+      time.sleep(5)
+      selecaoOUTROS = input("Digite uma das opções abaixo:\n1 - Trailer (YOUTUBE)\n2 - Linkedlin: Felipe Gabriel Macedo\n3 - Linkedln: Arthur Américo\n4 - Instituição\n5 - GitHub\n")
+      if selecaoOUTROS == "1":
+        webbrowser.open_new("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+      if selecaoOUTROS == "2":
+        webbrowser.open_new("https://br.linkedin.com/in/felipegabrielmacedo")
+      if selecaoOUTROS == "3":
+         webbrowser.open_new("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+      if selecaoOUTROS == "4":
+         webbrowser.open_new("https://faculdadesalvadorarena.org.br/sobre-a-faculdade/")
+      if selecaoOUTROS == "5":
+         webbrowser.open_new("https://github.com/felipegabriel6x/Pazzi-La-Calculadora-Magica")
+      
+   
+#Início:
+def menu():
+    limpar_tela()
+    print("Carregando...")
+    time.sleep(0)
+    limpar_tela()
+    print("PAZZI, La Calculadora Magica")
+    print("")
+    print("O que deseja calcular?\n1 - Matriz \n2 - Sistema Linear\n3 - Outros")
+    print("")
+    selecao = input("Digite o número para selecionar a opção desejada: ")
+
+    if selecao == "1":
+       MATRIZ()
+    if selecao == "2":
+       LINEAR()
+    if selecao == "3":
+           OUTROS()
+
+menu()
