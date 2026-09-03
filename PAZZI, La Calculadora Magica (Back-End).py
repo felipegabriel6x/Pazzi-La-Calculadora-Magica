@@ -418,7 +418,7 @@ def inversa():
    print("")
    selecao = input("Deseja fazer outro cálculo?: S - Sim | N - Não: ")
    if selecao == "S":
-      multiplicacao()
+      inversa()
    if selecao == "N":
       menu()
    else:
@@ -546,15 +546,15 @@ def OUTROS():
       time.sleep(5)
       selecaoOUTROS = input("Digite uma das opções abaixo:\n1 - Trailer (YOUTUBE)\n2 - Linkedlin: Felipe Gabriel Macedo\n3 - Linkedln: Arthur Américo\n4 - Instituição\n5 - GitHub\n")
       if selecaoOUTROS == "1":
-        webbrowser.open_new("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        webbrowser.open_new("https://www.youtube.com/watch?v=dQw4w9WgXcQ") #NOTA: Como o trailer oficial ainda não foi criado, o link colocado é do clip da música de Rick Astley
       if selecaoOUTROS == "2":
-        webbrowser.open_new("https://br.linkedin.com/in/felipegabrielmacedo")
+        webbrowser.open_new("https://br.linkedin.com/in/felipegabrielmacedo") # Link do meu Linkedln
       if selecaoOUTROS == "3":
-         webbrowser.open_new("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+         print("Ainda não criou")
       if selecaoOUTROS == "4":
-         webbrowser.open_new("https://faculdadesalvadorarena.org.br/sobre-a-faculdade/")
+         webbrowser.open_new("https://faculdadesalvadorarena.org.br/sobre-a-faculdade/") # Site da nossa instituição
       if selecaoOUTROS == "5":
-         webbrowser.open_new("https://github.com/felipegabriel6x/Pazzi-La-Calculadora-Magica")
+         webbrowser.open_new("https://github.com/felipegabriel6x/Pazzi-La-Calculadora-Magica") # Link do repertório do GitHub
        
 #Início:
 def menu():
